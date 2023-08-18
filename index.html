@@ -3,25 +3,42 @@
   <head>
     <title>Welcome to my GitHub Page</title>
     <link rel="stylesheet" href="Style.css"></link>
+    <script src="Book.txt"></script>
     <script type="text/javascript" src="Style_Script.js"></script>
+    <script type="text/javascript" src="Script.js"></script>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
   </head>
-  <body>
+  <body onload="loadfile('Book.md')">
     <div class="header" align="center">
-      <h1>Welcome to</h1>
-      <h3>Rookies111</h3>
-      <h5>GitHub Page</h5>
+      <ul class="nav">
+        <li name="nav-1"><a class="active" href="#">Home</a></li>
+        <li name="nav-2"><a href="#project-preview">Project Preview</a></li>
+        <li name="nav-3"><a href="#">Assignment Update</a></li>
+        <li name="nav-4"><a href="#">About</a></li>
+      </ul>
+      <div class="introduction">
+        Welcome to
+        Rookies111 GitHub Page
+      </div>
     </div>
     <div class="body" align="center">
+      <span class="section">Project Preview</span>
       <div class="project-preview">
-        <div id="project-1">
-          <b class="project-name">Project Name</b>
-          <hr>
-          <img class="preview-image" src="Assets/Python-Minesweeper-Preview.png">
-          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus et corporis explicabo beatae obcaecati officiis, sunt ea tempore, voluptatibus vitae autem voluptates? Et sed beatae, pariatur nam maiores architecto explicabo.</p>
-          <a href="#" align="right">
-            <button>Go to >>></button>
-          </a>
-        </div>
+        <template id="project-preview">
+          <div>
+            <b class="project-name"></b>
+            <hr>
+            <img class="preview-image">
+            <p class="description"></p>
+            <a align="right">
+              <button><span>Go</span></button>
+            </a>
+          </div>
+        </template>
+      </div>
+      <div>
+        <!-- <md-block id="book-review"># hi</md-block> -->
+        <iframe src="https://bipoeman.github.io/md_dump/" frameborder="0"></iframe>
       </div>
     </div>
   </body>
