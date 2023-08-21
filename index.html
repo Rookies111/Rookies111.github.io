@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Welcome to my GitHub Page</title>
-    <link rel="stylesheet" href="Style.css"></link>
-    <script type="text/javascript" src="Style_Script.js"></script>
-    <script type="text/javascript" src="Script.js"></script>
-    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
-  </head>
-  <body onload="loadfile('Book.md')">
-    <div class="header" align="center">
-      <ul class="nav">
-        <li name="nav-1"><a class="active" href="#">Home</a></li>
-        <li name="nav-2"><a href="#project-preview">Project Preview</a></li>
-        <li name="nav-3"><a href="#">Assignment Update</a></li>
-        <li name="nav-4"><a href="#">About</a></li>
-      </ul>
-      <div class="introduction">
-        Welcome to
-        Rookies111 GitHub Page
+
+<head>
+  <title>Welcome to my GitHub Page</title>
+  <link rel="stylesheet" href="Style.css">
+  </link>
+  <script type="text/javascript" src="Main-Script.js"></script>
+  <script typw="modules" src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+  <ul class="nav">
+    <li><a class="active" href="#" onclick="navigate(this)">Home</a></li>
+    <li><a href="#project-preview" onclick="navigate(this)">Project Preview</a></li>
+    <li><a href="#assignment" onclick="navigate(this)">Assignment</a></li>
+    <li><a href="Subpage/About.html" onclick="navigate(this)">About</a></li>
+  </ul>
+</head>
+
+<body onload="onLoad()" onmousewheel="screen_position_check()">
+  <div class="introduction">Welcome to Rookies111 GitHub Page</div>
+  <div class="section-header">Project Preview</div>
+  <div class="section" id="project-preview" align="center">
+    <template id="project-preview-temp">
+      <div class="preview-box">
+        <b class="preview-name"></b>
+        <hr>
+        <img class="preview-image">
+        <p class="preview-description"></p>
+        <a align="right">
+          <button><span>Go</span></button>
+        </a>
       </div>
+    </template>
+  </div>
+  <div class="section-header">Assignment</div>
+  <div class="section" id="assignment" align="center">
+    <div class="preview-box">
+      <b class="preview-name">C Book Review</b>
+      <hr>
+      <img class="preview-image"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/926px-C_Programming_Language.svg.png">
+      <p class="preview-description">Reviewing book about C Programming Language</p>
+      <a href="Subpage/Asssignment/Book-Review.html" align="right">
+        <button><span>Go</span></button>
+      </a>
     </div>
-    <div class="body" align="center">
-      <span class="section">Project Preview</span>
-      <div class="project-preview">
-        <template id="project-preview">
-          <div>
-            <b class="project-name"></b>
-            <hr>
-            <img class="preview-image">
-            <p class="description"></p>
-            <a align="right">
-              <button><span>Go</span></button>
-            </a>
-          </div>
-        </template>
-      </div>
-      <div>
-        <!-- <md-block id="book-review"># hi</md-block> -->
-        <iframe src="https://github.com/Rookies111/Rookies111.github.io/blob/main/Book.md?raw=true" frameborder="0"></iframe>
-      </div>
+    <div class="preview-box">
+      <b class="preview-name">C Problem</b>
+      <hr>
+      <img class="preview-image"
+        src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT62DN4vTVacW0hRiU18_yGkgFU8DdUbXW0mUSWh9XrPlr5aWrg">
+      <p class="preview-description">Solving the C Programming Language problem</p>
+      <a href="Subpage/Asssignment/C-Problem.html" align="right">
+        <button><span>Go</span></button>
+      </a>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
