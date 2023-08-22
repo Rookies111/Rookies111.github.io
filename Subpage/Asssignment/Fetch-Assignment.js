@@ -35,10 +35,11 @@ async function LoadC() {
     document.getElementById("page-index").value = 1
 }
 
+// Function to change to previous page
 function prev() {
     let current = document.getElementById("page-index").value - 1
     let displays = document.getElementsByClassName("code-display")
-    if (current-1 < 0) {return false}
+    if (current-1 < 0) {current = displays.length}
     for (i = 0; i < displays.length; i++) {
         displays[i].style.display = "none"
     }
@@ -46,10 +47,11 @@ function prev() {
     document.getElementById("page-index").value = current
 }
 
+// Function to change to next page
 function next() {
     let current = document.getElementById("page-index").value - 1
     let displays = document.getElementsByClassName("code-display")
-    if (current+1 >= displays.length) {return false}
+    if (current+1 >= displays.length) {current = -1}
     for (i = 0; i < displays.length; i++) {
         displays[i].style.display = "none"
     }
@@ -57,6 +59,7 @@ function next() {
     document.getElementById("page-index").value = current+2
 }
 
+// Function to change to select page
 function gotoPage() {
     let target = document.getElementById("page-index").value
     let displays = document.getElementsByClassName("code-display")
