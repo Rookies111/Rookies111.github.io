@@ -216,3 +216,43 @@ ul.nav li a.active:hover {
 .markdown-display strong em {
     color: #F00;
 }
+
+/* Class for display C */
+.code-display {
+    width: 90%;
+    height: 75vh;
+    margin: 25px 10px;
+    padding: 15px 25px;
+    background-color: var(--bg-color);
+    border: var(--border-setting);
+    border-radius: 15px;
+    box-shadow: var(--shadow-setting);
+    font: "consolas" calc(14px + 0.5vw);
+    overflow: auto;
+}
+
+#prev, #next {
+    width: 50px;
+    background-color: var(--bg-color);
+    padding: 5px 10px;
+    font-size: 30px;
+    cursor: inherit;
+    border-radius: 10px;
+    border: 0;
+    transition: 0.5s;
+}
+
+#prev:hover, #next:hover {
+    background-color: #EEE;
+    cursor: inherit;
+    border-radius: 10px;
+    border: 0;
+}
+
+#page-index {
+    width: 50px;
+    border-radius: 10px;
+    border: 1px inset #000;
+    text-align: center;
+    font-size: 30px;
+}

@@ -14,10 +14,17 @@
   </ul>
 </head>
 
-<body onload="onLoad()">
+<body onload="LoadC()">
   <div class="section-header">C Problems</div>
   <div class="section" align="center">
-    <div id="markdown-display" class="markdown-display" align="left"></div>
+    <template id="code-display-temp">
+      <div class="code-display" align="left"></div>
+    </template>
+  </div>
+  <div class="section" align="center">
+    <button id="prev" onclick="prev()">◄</button>
+    <input id="page-index" onchange="gotoPage()"></input>
+    <button id="next" onclick="next()">►</button>
   </div>
 </body>
 
